@@ -1,7 +1,13 @@
+import { Notifyer } from './Notifyer.js'
+
 const App = {
-   start() {
-      console.log('Started')
+   async start() {
+      try {
+         Notifyer.init()
+      } catch (err) {
+         console.log(err.message)
+      }
    }
 }
 
-export{ App }
+export { App }
