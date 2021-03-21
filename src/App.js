@@ -1,4 +1,5 @@
 import { Notifyer } from './Notifyer.js'
+import { Timer } from './Timer.js'
 
 const App = {
    async start() {
