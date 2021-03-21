@@ -1,3 +1,5 @@
+import View from './View.js';
+
 const Timer = {
   time: 0.1 * 60, // 0.1 minutos x 60 segundos
   currentTime: 0,
