@@ -1,8 +1,8 @@
 const View = {
-  render() {
+  render({ minutes, seconds }) {
     document.body.innerHTML = `
     <P>Próximo Post em</p>
-    <span>10:01</span>
+    <span>${minutes}: ${seconds}</span>
     `
   }
 }
