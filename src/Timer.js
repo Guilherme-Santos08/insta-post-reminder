@@ -1,7 +1,7 @@
 import { View } from './View.js';
 
 const Timer = {
-  time: 0.1 * 60, // 0.1 minutos x 60 segundos
+  time: 60 * 60, // 60 minutos x 60 segundos
   currentTime: 0,
   interval: null, // Criando a variavel para o countdown não ficar contando para sempre
 
@@ -10,7 +10,8 @@ const Timer = {
 
   formatTime: time => String(time).padStart(2, '0'),
 
-  init() {
+  init(time) {
+    Timer.time = time || Timer.time
     Timer.currentTime = Timer.time // Timer pega time e atribui no currentTime
     Timer.interval = setInterval(Timer.countdown, 1000)
   },
