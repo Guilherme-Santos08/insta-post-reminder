@@ -1,7 +1,12 @@
 const View = {
-  init() {
-    console.log('Olá, aqui é a senhorita view')
+  render() {
+    return `
+    <P>Próximo Post em</p>
+    <span>10:01</span>
+    `
   }
 }
 
-export default View
+document.body.innerHTML = View.render()
+
+export { View }
