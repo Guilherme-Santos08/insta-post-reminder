@@ -8,6 +8,8 @@ const Timer = {
   timeToMinutes: time => Math.floor(time / 60),
   timeToSeconds: time => time % 60, // Oque sobrar da divisão ele vai colocar aqui
 
+  formatTime: time => String(time).padStart(2, '0'),
+
   init() {
     Timer.currentTime = Timer.time // Timer pega time e atribui no currentTime
     Timer.interval = setInterval(Timer.countdown, 1000)
@@ -16,7 +18,14 @@ const Timer = {
   countdown() {
     Timer.currentTime = Timer.currentTime - 1 // a cada um segundo, ele vai tirar um segundo
 
-    console.log(Timer.timeToMinutes(Timer.currentTime), ":", Timer.timeToSeconds(Timer.currentTime))
+    const minutes = Timer.formatTime(Timer.timeToMinutes(Timer.currentTime))
+    const seconds = Timer.formatTime(Timer.timeToSeconds(Timer.currentTime))
+
+
+    View.render({
+      minutes,
+      seconds
+    })
 
     // View.render({
     //   minutes: "25",
