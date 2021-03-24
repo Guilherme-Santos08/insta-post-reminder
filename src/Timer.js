@@ -1,4 +1,5 @@
 import { View } from './View.js';
+import { Emitter } from './Emitter.js'
 
 const Timer = {
   time: 60 * 60, // 60 minutos x 60 segundos
@@ -11,6 +12,7 @@ const Timer = {
   formatTime: time => String(time).padStart(2, '0'),
 
   init(time) {
+    Emitter.emit('countdown-start')
     Timer.time = time || Timer.time
     Timer.currentTime = Timer.time // Timer pega time e atribui no currentTime
     Timer.interval = setInterval(Timer.countdown, 1000)
@@ -35,6 +37,7 @@ const Timer = {
 
     if(Timer.currentTime === 0) {
       clearInterval(Timer.interval) // Vai cancelar o countdown
+      Emitter.emit('countdown-end') // Vai reiciar o tempo
       return
     }
     
