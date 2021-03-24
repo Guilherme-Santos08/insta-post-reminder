@@ -3,7 +3,7 @@
  
 ## Assista às aulas
 - [x] [Aula 01: Sistema de Notificação](https://www.youtube.com/watch?v=Mhd6x2Z-F_w)
-- [] [Aula 02: Sistema de Timer](https://youtu.be/MJAwA2rICzs)
+- [x] [Aula 02: Sistema de Timer](https://youtu.be/MJAwA2rICzs)
 - [] [Aula 03: Sistema de Eventos](https://youtu.be/y5xhkvl2Jmc)
 - [] [Aula 04: App Desktop com Electron](https://youtu.be/3qTkfnBhBVU)
 - [] Aula 05: Tray com Electron
