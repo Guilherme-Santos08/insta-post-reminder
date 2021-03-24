@@ -6,7 +6,6 @@ const App = {
    async start() {
       try {
          Timer.init(0.1 * 60)
-         Emitter.init()
          // await Notifyer.init()
          // Notifyer.notify({
          //    title: "Hora do Post",
